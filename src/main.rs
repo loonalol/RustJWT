@@ -31,7 +31,7 @@ fn generate_token(config: &Config) -> Result<String, jsonwebtoken::errors::Error
         exp: tomorrow,
     };
 
-    let private_key = fs::read_to_string("AuthKey_9647W8QUMQ.p8").expect("Failed to read private key");
+    let private_key = fs::read_to_string(".p8").expect("Failed to read private key");
 
     let token = encode(
         &Header::new(Algorithm::ES256),
